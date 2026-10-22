@@ -1,3 +1,5 @@
+# Completed by LS to simulate the integration process with Pull requests and merging. The code is now complete and functional.
+
 from __future__ import annotations
 from dataclasses import dataclass
 import numpy as np
