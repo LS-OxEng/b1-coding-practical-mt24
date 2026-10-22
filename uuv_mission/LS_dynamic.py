@@ -81,7 +81,7 @@ class Mission:
         cave_height = data[:, 1]
         cave_depth = data[:, 2]
         return cls(reference, cave_height, cave_depth)
-        # pass (legacy from original template, remove this line after implementing the method)
+        # pass (legacy from original template after implementing the method)
 
 
 class ClosedLoop:
@@ -104,7 +104,7 @@ class ClosedLoop:
         for t in range(T):
             positions[t] = self.plant.get_position()
             observation_t = self.plant.get_depth()
-            # Call your controller here
+            # Called my controller here
             actions[t] = self.controller(mission.reference[t], observation_t)
             # call complete
             self.plant.transition(actions[t], disturbances[t])
