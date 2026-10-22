@@ -97,6 +97,8 @@ class ClosedLoop:
         positions = np.zeros((T, 2))
         actions = np.zeros(T)
         self.plant.reset_state()
+        # Added corresponding reset for the controller's internal state before starting the simulation
+        self.controller.reset()
 
         for t in range(T):
             positions[t] = self.plant.get_position()
